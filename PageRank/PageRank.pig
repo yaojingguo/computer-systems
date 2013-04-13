@@ -1,3 +1,4 @@
+# One iteration for PageRank
 table = load 'input2/table' using PigStorage(' ') as (vertex:chararray, p:float);
 graph = load 'input2/graph' using PigStorage(' ') as (vertex:chararray, 
                                                dests:{out:(vertex:chararray)});
