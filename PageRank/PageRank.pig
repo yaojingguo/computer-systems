@@ -1,7 +1,7 @@
 # One iteration for PageRank
 table = load 'input2/table' using PigStorage(' ') as (vertex:chararray, p:float);
-graph = load 'input2/graph' using PigStorage(' ') as (vertex:chararray, 
-                                               dests:{out:(vertex:chararray)});
+graph = load 'input2/graph' using PigStorage(' ') as (vertex:chararray, dests:{out:(vertex:chararray)});
+
 join_data = join table by vertex, graph by vertex;
 projection_data = foreach join_data generate table::vertex as vertex, 
                                              graph::dests as dests,
