@@ -1,1 +1,1 @@
-[MapReduce](wiki/MapReduce)
+[MapReduce](MapReduce)
